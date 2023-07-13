@@ -83,16 +83,17 @@ function App() {
     else if (operators.includes(i)) {
       isDecimal.current = false;
 
-      // add a 0 before the formula if the formula is empty
-      if (!formula) setFormula("0");
-
-      // replace the formula with the last computed result if there is a = in it
-      if (formula.includes("=")) {
+      if (!formula) {
+        // add a 0 before the formula if the formula is empty
+        setFormula("0" + i);
+      } else if (formula.includes("=")) {
+        // replace the formula with the last computed result if there is a = in it
         setFormula(display + i);
-      }
-      // only use tha last input operator
-      // FIXME: after entering a -, check if the end of formula is * or /
-      else {
+      } else if (i == "-" && /[.\d][*/]$/.test(formula)) {
+        setFormula(formula + i);
+      } else if (/[*/+]/.test(i) && /[*/]-$/.test(formula)) {
+        setFormula(formula.slice(0, -2) + i);
+      } else {
         setFormula(
           (formula) =>
             (operators.includes(formula.slice(-1))
