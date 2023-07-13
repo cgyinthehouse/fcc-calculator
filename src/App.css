@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  --temp-border: 1px solid rgb(13, 224, 155, 0.5);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#calculator {
+  width: 300px;
+  height: 100%;
+  margin: auto;
+}
+
+#buttons {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  padding: 0 1.5em 1.5em 1.5em;
+  gap: 6px;
+}
+
+#display {
+  margin: 0 auto;
+  width: 100%;
+}
+#formula {
+  font-size: 1.6em;
+  text-align: right;
+  overflow-wrap: break-word;
+  width: 100%;
+  height: fit-content;
+  padding: 0 35px;
+  margin: 0;
+}
+
+input {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  padding: 0 35px 10px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 3.2em;
+  font-weight: 300;
+  border: none;
+  text-align: right;
+  color: white;
+  background-color: transparent;
+  overflow-x: auto;
+}
+
+#zero {
+  grid-column: 1 / span 2;
+  background-color: #313030;
+  border-radius: 28px;
+  text-align: left;
+  padding-left: 1.3rem;
+  width: 100%;
+}
+
+#one,
+#two,
+#three,
+#four,
+#five,
+#six,
+#seven,
+#eight,
+#nine,
+#decimal {
+  background-color: #313030;
+}
+
+#zero:hover,
+#one:hover,
+#two:hover,
+#three:hover,
+#four:hover,
+#five:hover,
+#six:hover,
+#seven:hover,
+#eight:hover,
+#nine:hover,
+#decimal:hover {
+  background-color: #737373;
+}
+
+#divide,
+#multiply,
+#subtract,
+#add,
+#equals {
+  background-color: #f79905;
+}
+
+#divide:hover,
+#multiply:hover,
+#subtract:hover,
+#add:hover,
+#equals:hover {
+  background-color: #f8be61;
+}
+
+#plus_or_minus,
+#clear,
+#percent {
+  color: black;
+  font-size: 1.5rem;
+}
+
+#plus_or_minus:hover,
+#clear:hover,
+#percent:hover {
+  background-color: #d4d4d4;
+}
+
+#footer {
+  display: flex;
+  gap: 0.3em;
+  align-items: center;
+  justify-content: center;
+  color: #737373;
+  margin: 1em auto;
+  font-size: small;
+}
+
+#footer p:nth-child(2):hover {
+  cursor: pointer;
+}
+
+#footer svg {
+  scale: 0.6;
+}
+
+#footer svg:hover {
+  cursor: pointer;
+}
