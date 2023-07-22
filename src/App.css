@@ -121,7 +121,7 @@ input {
   background-color: #d4d4d4;
 }
 
-#footer {
+footer {
   display: flex;
   gap: 0.3em;
   align-items: center;
@@ -131,14 +131,14 @@ input {
   font-size: small;
 }
 
-#footer p:nth-child(2):hover {
+footer p:nth-child(2):hover {
   cursor: pointer;
 }
 
-#footer svg {
+footer svg {
   scale: 0.6;
 }
 
-#footer svg:hover {
+footer svg:hover {
   cursor: pointer;
 }

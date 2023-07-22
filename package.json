@@ -1,5 +1,6 @@
 {
   "name": "calculator",
+  "author": "Kent Chen <cgyinthehouse@github.com>",
   "private": true,
   "version": "0.0.0",
   "type": "module",
